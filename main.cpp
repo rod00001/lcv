@@ -18,6 +18,8 @@ int main(){
     pendiente(0,0,5,5);
     rectacilengra(5,5,5);
     cilarectengra(10,45,10);
+    rectacil(5,5,5);
+    cilarect(10,45,10);
 
 
 

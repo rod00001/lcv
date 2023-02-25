@@ -53,12 +53,6 @@ double rectapolengrad(double x=0,double y=0){
     return 0;
 }
 
-double distpuntos(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,double z2=0){
-    r=sqrt(((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2))+((z1-z2)*(z1-z2)));
-    cout<<r<<endl;
-    return r;
-}
-
 double puntomedio(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,double z2=0){
     x=(x1+x2)/2;
     y=(x1+x2)/2;
@@ -95,9 +89,29 @@ double cilarectengra(double r=0,double teta=0,double z=0){
     x=r*cos(teta);
     y=r*sin(teta);
     z=z;
+    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
+    return r;
+}
+
+
+double rectacil(double x=0,double y=0,double z=0){
+    r=sqrt((x*x)+(y*y));
+    teta=atan(y/x);
+    z=z;
     cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
     return r;
 }
+
+double cilarect(double r=0,double teta=0,double z=0){
+    x=r*cos(teta);
+    y=r*sin(teta);
+    z=z;
+    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
+    return r;
+}
+
+
+
 
 
 

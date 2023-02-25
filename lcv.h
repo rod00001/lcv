@@ -31,6 +31,7 @@ double polarectenrad(double r=0,double teta=0){
     return 0;
 }
 
+//pasar de coordenadas polares a rectangulares en grados
 double polarectengrad(double r=0,double teta=0){
     teta=gradarad(teta);
     x=r*cos(teta);
@@ -39,6 +40,7 @@ double polarectengrad(double r=0,double teta=0){
     return 0;
 }
 
+//pasar de coordenadas rectangulares a polares en radianes
 double rectapolenrad(double x=0,double y=0){
     r=sqrt((x*x)+(y*y));
     teta=atan(y/x);
@@ -46,6 +48,7 @@ double rectapolenrad(double x=0,double y=0){
     return 0;
 }
 
+//pasar de coordenadas rectangulares a polares en grados
 double rectapolengrad(double x=0,double y=0){
     r=sqrt((x*x)+(y*y));
     teta=atan(y/x);
@@ -54,6 +57,7 @@ double rectapolengrad(double x=0,double y=0){
     return 0;
 }
 
+//encontrar el punto medio entre dos puntos
 double puntomedio(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,double z2=0){
     x=(x1+x2)/2;
     y=(x1+x2)/2;
@@ -62,6 +66,7 @@ double puntomedio(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,do
     return 0;
 }
 
+//regresa la pendiente
 double pendiente(double x1=0,double y1=0,double x2=0,double y2=0){
     m=(y1-y2)/(x1-x2);
     teta=atan(m);
@@ -70,12 +75,14 @@ double pendiente(double x1=0,double y1=0,double x2=0,double y2=0){
     return m;
 }
 
+//regresa la distancia entre dos puntos
 double distpuntos(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,double z2=0){
     r=sqrt(((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2))+((z1-z2)*(z1-z2)));
     cout<<r<<endl;
     return r;
 }
 
+//pasa de coordenadas rectangulares a cilindricas en grados
 double rectacilengra(double x=0,double y=0,double z=0){
     r=sqrt((x*x)+(y*y));
     teta=atan(y/x);
@@ -85,6 +92,7 @@ double rectacilengra(double x=0,double y=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas cilindricas a rectangulares en grados
 double cilarectengra(double r=0,double teta=0,double z=0){
     teta=gradarad(teta);
     x=r*cos(teta);
@@ -94,7 +102,7 @@ double cilarectengra(double r=0,double teta=0,double z=0){
     return 0;
 }
 
-
+//pasa de coordenadas rectangulares a cilindricas
 double rectacil(double x=0,double y=0,double z=0){
     r=sqrt((x*x)+(y*y));
     teta=atan(y/x);
@@ -103,6 +111,7 @@ double rectacil(double x=0,double y=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas cilindricas a rectangulares
 double cilarect(double r=0,double teta=0,double z=0){
     x=r*cos(teta);
     y=r*sin(teta);
@@ -111,6 +120,7 @@ double cilarect(double r=0,double teta=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas esfericas a rectangulares
 double esfarect(double r=0,double teta=0,double phy=0){
     x=r*sin(phy)*cos(teta);
     y=r*sin(phy)*sin(teta);
@@ -119,6 +129,7 @@ double esfarect(double r=0,double teta=0,double phy=0){
     return 0;
 }
 
+//pasa de coordenadas rectangulares a esféricas
 double rectaesf(double x=0,double y=0,double z=0){
     r=sqrt((x*x)+(y*y)+(z*z));
     teta=atan(y/x);
@@ -127,6 +138,7 @@ double rectaesf(double x=0,double y=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas esfericas a rectangulares en grados
 double esfarectengra(double r=0,double teta=0,double phy=0){
     teta=gradarad(teta);
     x=r*sin(phy)*cos(teta);
@@ -136,6 +148,7 @@ double esfarectengra(double r=0,double teta=0,double phy=0){
     return 0;
 }
 
+//pasa de coordenadas rectangulares a esfericas en grados
 double rectaesfengra(double x=0,double y=0,double z=0){
     r=sqrt((x*x)+(y*y)+(z*z));
     teta=atan(y/x);
@@ -145,6 +158,7 @@ double rectaesfengra(double x=0,double y=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas esfericas a cilindricas
 double esfacil(double p=0,double teta=0,double phy=0){
     r=p*sin(phy);
     teta=teta;
@@ -153,6 +167,7 @@ double esfacil(double p=0,double teta=0,double phy=0){
     return 0;
 }
 
+//pasa de coordenadas cilindricas a esféricas
 double cilaesf(double r=0,double teta=0,double z=0){
     double p=0;
     p=sqrt((r*r)+(z*z));
@@ -162,6 +177,7 @@ double cilaesf(double r=0,double teta=0,double z=0){
     return 0;
 }
 
+//pasa de coordenadas esféricas a cilindricas en grados
 double esfacilengra(double p=0,double teta=0,double phy=0){
     phy=gradarad(phy);
     r=p*sin(phy);
@@ -171,6 +187,7 @@ double esfacilengra(double p=0,double teta=0,double phy=0){
     return 0;
 }
 
+//pasa de coordenadas cilindricas a esfericas en grados
 double cilaesfengra(double r=0,double teta=0,double z=0){
     double p=0;
     p=sqrt((r*r)+(z*z));
@@ -181,10 +198,12 @@ double cilaesfengra(double r=0,double teta=0,double z=0){
     return 0;
 }
 
+//producto punto entre dos vectores
 double upuntov(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
     return ((u1*v1)+(u2*v2)+(u3*v3));
 }
 
+//suma de dos vectores u+v
 double umasv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
     w1=u1+v1;
     w2=u2+v2;
@@ -193,6 +212,7 @@ double umasv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double 
     return 0;
 }
 
+//resta de dos vectores u-v
 double umenosv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
     w1=u1-v1;
     w2=u2-v2;
@@ -201,6 +221,7 @@ double umenosv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,doubl
     return 0;
 }
 
+//vector por escalar k*u
 double kporu(double k=0, double u1=0,double u2=0,double u3=0){
     w1=k*u1;
     w2=k*u2;

@@ -26,9 +26,13 @@ int main(){
     rectaesfengra(10,10,10);
     esfacil(10,1.57,1.57);
     cilaesf(10,1.57,10);
-    esfencilengra(10,45,45);
+    esfacilengra(10,45,45);
     cilaesfengra(10,45,10);
-
+    cout<<upuntov(1,2,4,6,8,9)<<endl;
+    upuntov(1,2,3,4,5,6);
+    umasv(1,2,3,4,5,6);
+    umenosv(1,2,3,4,5,6);
+    kporu(5,1,2,3);
 
 
     return 0;

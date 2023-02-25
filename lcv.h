@@ -11,6 +11,7 @@ double grad=0;
 double x=0, y=0, z=0, r=0, teta=0, phy=0;
 double dist=0;
 double m=0;
+double w1=0, w2=0, w3=0;
 
 //pasr de grados a radianes
 double gradarad(double grad){
@@ -180,6 +181,30 @@ double cilaesfengra(double r=0,double teta=0,double z=0){
     return 0;
 }
 
+double upuntov(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    return ((u1*v1)+(u2*v2)+(u3*v3));
+}
 
+double umasv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    w1=u1+v1;
+    w2=u2+v2;
+    w3=u3+v3;
+    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    return 0;
+}
 
+double umenosv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    w1=u1-v1;
+    w2=u2-v2;
+    w3=u3-v3;
+    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    return 0;
+}
 
+double kporu(double k=0, double u1=0,double u2=0,double u3=0){
+    w1=k*u1;
+    w2=k*u2;
+    w3=k*u3;
+    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    return 0;
+}

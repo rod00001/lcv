@@ -8,7 +8,7 @@ using namespace std;
 
 double rad=0;
 double grad=0;
-double x=0, y=0, z=0, r=0, teta=0;
+double x=0, y=0, z=0, r=0, teta=0, phy=0;
 double dist=0;
 double m=0;
 
@@ -81,7 +81,7 @@ double rectacilengra(double x=0,double y=0,double z=0){
     teta=radagrad(teta);
     z=z;
     cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
-    return r;
+    return 0;
 }
 
 double cilarectengra(double r=0,double teta=0,double z=0){
@@ -90,7 +90,7 @@ double cilarectengra(double r=0,double teta=0,double z=0){
     y=r*sin(teta);
     z=z;
     cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
-    return r;
+    return 0;
 }
 
 
@@ -99,7 +99,7 @@ double rectacil(double x=0,double y=0,double z=0){
     teta=atan(y/x);
     z=z;
     cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
-    return r;
+    return 0;
 }
 
 double cilarect(double r=0,double teta=0,double z=0){
@@ -107,10 +107,42 @@ double cilarect(double r=0,double teta=0,double z=0){
     y=r*sin(teta);
     z=z;
     cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
-    return r;
+    return 0;
 }
 
+double esfarect(double r=0,double teta=0,double phy=0){
+    x=r*sin(phy)*cos(teta);
+    y=r*sin(phy)*sin(teta);
+    z=r*cos(phy);
+    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
+    return 0;
+}
 
+double rectaesf(double x=0,double y=0,double z=0){
+    r=sqrt((x*x)+(y*y)+(z*z));
+    teta=atan(y/x);
+    phy=acos(z/(sqrt((x*x)+(y*y)+(z*z))));
+    cout<<"("<<r<<","<<teta<<","<<phy<<")"<<endl;
+    return 0;
+}
+
+double esfarectengra(double r=0,double teta=0,double phy=0){
+    teta=gradarad(teta);
+    x=r*sin(phy)*cos(teta);
+    y=r*sin(phy)*sin(teta);
+    z=r*cos(phy);
+    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
+    return 0;
+}
+
+double rectaesfengra(double x=0,double y=0,double z=0){
+    r=sqrt((x*x)+(y*y)+(z*z));
+    teta=atan(y/x);
+    phy=acos(z/(sqrt((x*x)+(y*y)+(z*z))));
+    teta=radagrad(teta);
+    cout<<"("<<r<<","<<teta<<","<<phy<<")"<<endl;
+    return 0;
+}
 
 
 

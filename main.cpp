@@ -20,6 +20,10 @@ int main(){
     cilarectengra(10,45,10);
     rectacil(5,5,5);
     cilarect(10,45,10);
+    esfarect(10,1.57,1.57);
+    rectaesf(7.07,7.07,7.07);
+    esfarectengra(10,45,45);
+    rectaesfengra(10,10,10);
 
 
 

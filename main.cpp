@@ -24,6 +24,10 @@ int main(){
     rectaesf(7.07,7.07,7.07);
     esfarectengra(10,45,45);
     rectaesfengra(10,10,10);
+    esfacil(10,1.57,1.57);
+    cilaesf(10,1.57,10);
+    esfencilengra(10,45,45);
+    cilaesfengra(10,45,10);
 
 
 

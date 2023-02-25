@@ -144,7 +144,41 @@ double rectaesfengra(double x=0,double y=0,double z=0){
     return 0;
 }
 
+double esfacil(double p=0,double teta=0,double phy=0){
+    r=p*sin(phy);
+    teta=teta;
+    z=p*cos(phy);
+    cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
+    return 0;
+}
 
+double cilaesf(double r=0,double teta=0,double z=0){
+    double p=0;
+    p=sqrt((r*r)+(z*z));
+    teta=teta;
+    phy=acos(z/sqrt((r*r)+(z*z)));
+    cout<<"("<<p<<","<<teta<<","<<phy<<")"<<endl;
+    return 0;
+}
+
+double esfacilengra(double p=0,double teta=0,double phy=0){
+    phy=gradarad(phy);
+    r=p*sin(phy);
+    teta=teta;
+    z=p*cos(phy);
+    cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
+    return 0;
+}
+
+double cilaesfengra(double r=0,double teta=0,double z=0){
+    double p=0;
+    p=sqrt((r*r)+(z*z));
+    teta=teta;
+    phy=acos(z/sqrt((r*r)+(z*z)));
+    phy=radagrad(phy);
+    cout<<"("<<p<<","<<teta<<","<<phy<<")"<<endl;
+    return 0;
+}
 
 
 

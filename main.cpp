@@ -38,6 +38,7 @@ int main(){
     normu(1,-5,4);
     ucruzv(1,2,4,6,8,9);
     tripleprod(1,2,4,6,0,9,-1,-2,0);
+    frecta ();
 
 
     return 0;

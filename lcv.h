@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<fstream>
 
 #define PI 3.14159265359
 #define E 2.718281828
@@ -231,6 +232,7 @@ double kporu(double k=0, double u1=0,double u2=0,double u3=0){
     return 0;
 }
 
+//determina si son ortogonales dos vectores
 double vortou (double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
     w=upuntov(u1,u2,u3,v1,v2,v3);
     if (w != 0)
@@ -240,24 +242,28 @@ double vortou (double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,doubl
     return 0;
 }
 
+//Calcula el determinante de una matriz A de tamaño 3*3
 double detA3(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double w1=0,double w2=0,double w3=0){
     w=u1*((v2*w3)-(w2*v3))-u2*((v1*w3)-(w1*v3))+u3*((v1*w2)-(w1*v2));
     cout<<"Det de A: "<<w<<endl;
     return w;
 }
 
+//Calcula la logitud de un vector
 double longu(double u1=0,double u2=0,double u3=0){
     w=sqrt((u1*u1)+(u2*u2)+(u3*u3));
     cout<<"longitud de u= "<<w<<endl;
     return w;
 }
 
+//Muestra el vector dado normalizado
 double normu(double u1=0,double u2=0,double u3=0){
     w=longu(u1,u2,u3);
     cout<<"u normalizado= "<<"<"<<u1/w<<","<<u2/w<<","<<u3/w<<">"<<endl;
     return 0;
 }
 
+//Producto cruz entre u y v
 double ucruzv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
     w1=(u2*v3)-(v2*u3);
     w2=-1*((u1*v3)-(v1*u3));
@@ -266,12 +272,23 @@ double ucruzv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double
     return 0;
 }
 
-
+//Devuelve el triple producto punto de los tres vectores
 double tripleprod(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double w1=0,double w2=0,double w3=0){
     w4=(v2*w3)-(w2*v3);
     w5=-1*((v1*w3)-(w1*v3));
     w6=(v1*w2)-(w1*v2);
     w=upuntov(u1,u2,u3,w4,w5,w6);
     cout<<"Triple producto= "<<w<<endl;
-    return 0;
+    return w;
 }
+
+int frecta () {
+  ofstream myfile;
+  myfile.open ("frecta.");
+  myfile << "Writing this to a file.\n";
+  myfile.close();
+  return 0;
+}
+
+
+

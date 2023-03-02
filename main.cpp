@@ -38,7 +38,8 @@ int main(){
     normu(1,-5,4);
     ucruzv(1,2,4,6,8,9);
     tripleprod(1,2,4,6,0,9,-1,-2,0);
-    frecta ();
+    frecta (2,.2,0,10,.5);
+    frectapuntovector (1,1,1,1,2,3,0,10,.2);
 
 
     return 0;

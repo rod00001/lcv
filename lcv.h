@@ -282,11 +282,39 @@ double tripleprod(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,do
     return w;
 }
 
-int frecta () {
-  ofstream myfile;
-  myfile.open ("frecta.");
-  myfile << "Writing this to a file.\n";
-  myfile.close();
+int frecta (double a, double m,double to,double tf,double paso) {
+    double ft=0;
+     ofstream myfile;
+     myfile.open ("frecta.csv");
+     cout<<"Funcion recta= "<<endl;
+
+    for (float t = to; t < tf; t=t+paso)
+    {
+        ft=a+(m*t);
+        myfile<<t<<","<<ft<<endl;
+        cout<<t<<","<<ft<<endl;
+    }
+  
+     myfile.close();
+  return 0;
+}
+
+int frectapuntovector (double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double to=0,double tf=10,double paso=0.1) {
+    
+     ofstream myfile;
+     myfile.open ("frectapuntovector.csv");
+     
+    cout<<"Recta punto vector= "<<endl;
+    for (float t = to; t < tf; t=t+paso)
+    {
+        w1=u1+(v1*t);
+        w2=u2+(v2*t);
+        w3=u3+(v3*t);
+        myfile<<t<<","<<w1<<","<<w2<<","<<w3<<endl;
+        cout<<t<<","<<w1<<","<<w2<<","<<w3<<endl;
+    }
+  
+     myfile.close();
   return 0;
 }
 

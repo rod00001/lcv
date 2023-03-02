@@ -11,7 +11,7 @@ double grad=0;
 double x=0, y=0, z=0, r=0, teta=0, phy=0;
 double dist=0;
 double m=0;
-double w1=0, w2=0, w3=0;
+double w1=0, w2=0, w3=0, w=0, A=0, w4=0, w5=0, w6=0;
 
 //pasr de grados a radianes
 double gradarad(double grad){
@@ -200,6 +200,7 @@ double cilaesfengra(double r=0,double teta=0,double z=0){
 
 //producto punto entre dos vectores
 double upuntov(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    //cout<<"u punto v= "<<(u1*v1)+(u2*v2)+(u3*v3)<<endl;
     return ((u1*v1)+(u2*v2)+(u3*v3));
 }
 
@@ -208,7 +209,7 @@ double umasv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double 
     w1=u1+v1;
     w2=u2+v2;
     w3=u3+v3;
-    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    cout<<"u+v= "<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
     return 0;
 }
 
@@ -217,7 +218,7 @@ double umenosv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,doubl
     w1=u1-v1;
     w2=u2-v2;
     w3=u3-v3;
-    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    cout<<"u-v= "<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
     return 0;
 }
 
@@ -226,6 +227,51 @@ double kporu(double k=0, double u1=0,double u2=0,double u3=0){
     w1=k*u1;
     w2=k*u2;
     w3=k*u3;
-    cout<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    cout<<"k*u= "<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    return 0;
+}
+
+double vortou (double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    w=upuntov(u1,u2,u3,v1,v2,v3);
+    if (w != 0)
+    {
+        cout<<"No son ortogonales."<<endl;        
+    }else{cout<<"Son ortogonales"<<endl;}
+    return 0;
+}
+
+double detA3(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double w1=0,double w2=0,double w3=0){
+    w=u1*((v2*w3)-(w2*v3))-u2*((v1*w3)-(w1*v3))+u3*((v1*w2)-(w1*v2));
+    cout<<"Det de A: "<<w<<endl;
+    return w;
+}
+
+double longu(double u1=0,double u2=0,double u3=0){
+    w=sqrt((u1*u1)+(u2*u2)+(u3*u3));
+    cout<<"longitud de u= "<<w<<endl;
+    return w;
+}
+
+double normu(double u1=0,double u2=0,double u3=0){
+    w=longu(u1,u2,u3);
+    cout<<"u normalizado= "<<"<"<<u1/w<<","<<u2/w<<","<<u3/w<<">"<<endl;
+    return 0;
+}
+
+double ucruzv(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0){
+    w1=(u2*v3)-(v2*u3);
+    w2=-1*((u1*v3)-(v1*u3));
+    w3=(u1*v2)-(v1*u2);
+    cout<<"u cruz v= "<<"<"<<w1<<","<<w2<<","<<w3<<">"<<endl;
+    return 0;
+}
+
+
+double tripleprod(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double w1=0,double w2=0,double w3=0){
+    w4=(v2*w3)-(w2*v3);
+    w5=-1*((v1*w3)-(w1*v3));
+    w6=(v1*w2)-(w1*v2);
+    w=upuntov(u1,u2,u3,w4,w5,w6);
+    cout<<"Triple producto= "<<w<<endl;
     return 0;
 }

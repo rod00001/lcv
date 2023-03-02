@@ -28,11 +28,16 @@ int main(){
     cilaesf(10,1.57,10);
     esfacilengra(10,45,45);
     cilaesfengra(10,45,10);
-    cout<<upuntov(1,2,4,6,8,9)<<endl;
-    upuntov(1,2,3,4,5,6);
+    cout<<"upunto ="<<upuntov(1,2,4,6,8,9)<<endl;
     umasv(1,2,3,4,5,6);
     umenosv(1,2,3,4,5,6);
     kporu(5,1,2,3);
+    vortou(1,2,4,6,8,9);
+    detA3(1,2,4,6,0,9,-1,-2,0);
+    longu(1,2,4);
+    normu(1,-5,4);
+    ucruzv(1,2,4,6,8,9);
+    tripleprod(1,2,4,6,0,9,-1,-2,0);
 
 
     return 0;

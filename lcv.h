@@ -282,6 +282,7 @@ double tripleprod(double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,do
     return w;
 }
 
+//Guarda un archivo frecta.csv con los puntos de la recta en el intervalo y usando el paso dado en 2D
 int frecta (double a, double m,double to,double tf,double paso) {
     double ft=0;
      ofstream myfile;
@@ -299,6 +300,7 @@ int frecta (double a, double m,double to,double tf,double paso) {
   return 0;
 }
 
+//Guarda un archivo frectapuntovector.csv con los puntos de la recta en el intervalo y usando el paso dado 3n 3D
 int frectapuntovector (double u1=0,double u2=0,double u3=0,double v1=0,double v2=0,double v3=0,double to=0,double tf=10,double paso=0.1) {
     
      ofstream myfile;

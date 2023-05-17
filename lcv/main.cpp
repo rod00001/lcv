@@ -40,6 +40,7 @@ int main(){
     tripleprod(1,2,4,6,0,9,-1,-2,0);
     frecta (2,.2,0,10,.5);
     frectapuntovector (1,1,1,1,2,3,0,10,.2);
+    normu(1,7,4);
 
 
     return 0;

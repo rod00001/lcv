@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<fstream>
+//#include"lcv.h"
 
 #define PI 3.14159265359
 #define E 2.718281828

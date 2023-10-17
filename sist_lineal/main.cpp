@@ -11,7 +11,7 @@ int main (){
     double dt=0.1;
     double b=0.25;
     double m=0.1;
-    double F=1;
+    double F=0.001;
     double tiempo=0;
 
     ofstream myfile;
@@ -19,7 +19,7 @@ int main (){
     myfile<<"tiempo (s)"<<","<<"x (m)"<<","<<"dx (m/s)"<<","<<"F (N)"<<endl;
     myfile<<tiempo<<","<<x<<","<<dx<<","<<F<<endl;
 
-    for (size_t i = 0; i < 100; i=i++)
+    for (size_t i = 0; i < 100; i++)
     {
 
         x=(dx*dt)+x;

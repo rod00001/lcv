@@ -10,7 +10,7 @@ using namespace std;
 
 double rad=0;
 double grad=0;
-double x=0, y=0, z=0, r=0, teta=0, phy=0;
+double x=0, y=0, z=0, r=0, teta=0, phy=0,x11=0, y11=0, z11=0,x2=0, y2=0, z2=0;
 double dist=0;
 double m=0;
 double w1=0, w2=0, w3=0, w=0, A=0, w4=0, w5=0, w6=0;

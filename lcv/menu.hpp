@@ -22,6 +22,12 @@ int menu(){
         cout<<"9.-Regresa la distancia entre dos puntos: "<<endl;
         cout<<"10.-Pasa de coordenadas rectangulares a cilindricas en grados: "<<endl;
         cout<<"11.-Pasa de coordenadas cilindricas a rectangulares en grados: "<<endl;
+        cout<<"12.-Pasa de coordenadas rectangulares a cilindricas en radianes: "<<endl;
+        cout<<"13.-Pasa de coordenadas cilindricas (radianes) a rectangulares: "<<endl;
+        cout<<"14.-Pasa de coordenadas esfericas a rectangulares: "<<endl;
+        cout<<"15.-Pasa de coordenadas rectangulares a esfericas: "<<endl;
+        cout<<"16.-Pasa de coordenadas esfericas a rectangulares en grados: "<<endl;
+        cout<<"17.-Pasa de coordenadas rectangulares a esfericas en grados: "<<endl;
         cin>>opcion;
 
         
@@ -107,7 +113,7 @@ int menu(){
             distpuntos(x11,y11,z11,x2,y2,z2);
             break;
 
-        case 18:
+        case 10:
 
             cout<<"Pasa de coordenadas rectangulares a cilindricas en grados: "<<endl;
             cout<<"x1 = "; cin>>x;cout<<endl;
@@ -125,65 +131,66 @@ int menu(){
             cilarectengra(r,teta,z);
             break;
 
+
+
+        case 12:
+
+            cout<<"Pasa de coordenadas rectangulares a cilindricas en radianes: "<<endl;
+            cout<<"x = "; cin>>x;cout<<endl;
+            cout<<"y = "; cin>>y;cout<<endl;
+            cout<<"z = "; cin>>z;cout<<endl;
+            rectacil(x,y,z);
+            break;
+
+        case 13:
+
+            cout<<"Pasa de coordenadas cilindricas (radianes) a rectangulares: "<<endl;
+            cout<<"r = "; cin>>r;cout<<endl;
+            cout<<"teta = "; cin>>teta;cout<<endl;
+            cout<<"z= "; cin>>z;cout<<endl;
+            cilarect(r,teta,z);
+            break;
+
+        case 14:
+
+            cout<<"Pasa de coordenadas esfericas a rectangulares: "<<endl;
+            cout<<"r = "; cin>>r;cout<<endl;
+            cout<<"teta = "; cin>>teta;cout<<endl;
+            cout<<"phy = "; cin>>phy;cout<<endl;
+            esfarect(r,teta,phy);
+            break;
+
+       case 15:
+
+            cout<<"Pasa de coordenadas rectangulares a esfericas: "<<endl;
+            cout<<"x = "; cin>>x;cout<<endl;
+            cout<<"y = "; cin>>y;cout<<endl;
+            cout<<"z = "; cin>>z;cout<<endl;
+            rectaesf(x,y,z);
+            break;
+
+       case 16:
+
+            cout<<"Pasa de coordenadas esfericas a rectangulares en grados: "<<endl;
+            cout<<"r = "; cin>>r;cout<<endl;
+            cout<<"teta = "; cin>>teta;cout<<endl;
+            cout<<"phy = "; cin>>phy;cout<<endl;
+            rectaesf(r,teta,phy);
+            break;
+
+       case 17:
+
+            cout<<"Pasa de coordenadas rectangulares a esfericas en grados: "<<endl;
+            cout<<"x = "; cin>>x;cout<<endl;
+            cout<<"y = "; cin>>y;cout<<endl;
+            cout<<"z = "; cin>>z;cout<<endl;
+            rectaesf(x,y,z);
+            break;
+
+
     /*    
 
 
-
-//pasa de coordenadas rectangulares a cilindricas
-double rectacil(double x=0,double y=0,double z=0){
-    r=sqrt((x*x)+(y*y));
-    teta=atan(y/x);
-    z=z;
-    cout<<"("<<r<<","<<teta<<","<<z<<")"<<endl;
-    return 0;
-}
-
-//pasa de coordenadas cilindricas a rectangulares
-double cilarect(double r=0,double teta=0,double z=0){
-    x=r*cos(teta);
-    y=r*sin(teta);
-    z=z;
-    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
-    return 0;
-}
-
-//pasa de coordenadas esfericas a rectangulares
-double esfarect(double r=0,double teta=0,double phy=0){
-    x=r*sin(phy)*cos(teta);
-    y=r*sin(phy)*sin(teta);
-    z=r*cos(phy);
-    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
-    return 0;
-}
-
-//pasa de coordenadas rectangulares a esféricas
-double rectaesf(double x=0,double y=0,double z=0){
-    r=sqrt((x*x)+(y*y)+(z*z));
-    teta=atan(y/x);
-    phy=acos(z/(sqrt((x*x)+(y*y)+(z*z))));
-    cout<<"("<<r<<","<<teta<<","<<phy<<")"<<endl;
-    return 0;
-}
-
-//pasa de coordenadas esfericas a rectangulares en grados
-double esfarectengra(double r=0,double teta=0,double phy=0){
-    teta=gradarad(teta);
-    x=r*sin(phy)*cos(teta);
-    y=r*sin(phy)*sin(teta);
-    z=r*cos(phy);
-    cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
-    return 0;
-}
-
-//pasa de coordenadas rectangulares a esfericas en grados
-double rectaesfengra(double x=0,double y=0,double z=0){
-    r=sqrt((x*x)+(y*y)+(z*z));
-    teta=atan(y/x);
-    phy=acos(z/(sqrt((x*x)+(y*y)+(z*z))));
-    teta=radagrad(teta);
-    cout<<"("<<r<<","<<teta<<","<<phy<<")"<<endl;
-    return 0;
-}
 
 //pasa de coordenadas esfericas a cilindricas
 double esfacil(double p=0,double teta=0,double phy=0){

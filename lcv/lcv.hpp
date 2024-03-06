@@ -62,8 +62,8 @@ double rectapolengrad(double x=0,double y=0){
 //encontrar el punto medio entre dos puntos
 double puntomedio(double x1=0,double y1=0,double z1=0,double x2=0,double y2=0,double z2=0){
     x=(x1+x2)/2;
-    y=(x1+x2)/2;
-    z=(x1+x2)/2;
+    y=(y1+y2)/2;
+    z=(z1+z2)/2;
     cout<<"("<<x<<","<<y<<","<<z<<")"<<endl;
     return 0;
 }
